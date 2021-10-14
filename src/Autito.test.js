@@ -39,4 +39,10 @@ describe("Autito ", () => {
   it("Deberia retornar la posicion del autito dando un salto (por defecto hacia el Este)", () => {
     expect(moveCarJumping("1,3/S")).toEqual("3,3");
   })
+  it("Deberia retornar la posicion del autito dando mas de un salto (por defecto hacia el Este)", () => {
+    expect(moveCarJumping("1,3/SSS")).toEqual("7,3");
+  })
+  it("Deberia retornar la posicion del autito dando mas de un salto (por defecto hacia el Este)", () => {
+    expect(moveCarJumping("10,3/SSS")).toEqual("16,3");
+  })
 });

@@ -76,6 +76,13 @@ export function moveCarAlong(command){
   var listResult = [lastposition,listInitialPosition,movements];
   return listResult;
 }
+function jumpCar(jump, posicion){
+  return posicion+jump*2;
+}
 export function moveCarJumping(command){
-  return "3,3";
+  var movement = command.split("/")[1];
+  var position = command.split("/")[0];
+  var listAxis = [Number(position.split(",")[0]),Number(position.split(",")[1])];
+  listAxis[0]=jumpCar(stringLenght(movement), listAxis[0]);
+  return listAxis[0].toString()+","+listAxis[1].toString();
 }
