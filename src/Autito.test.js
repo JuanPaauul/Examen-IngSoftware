@@ -43,6 +43,6 @@ describe("Autito ", () => {
     expect(moveCarJumping("1,3/SSS")).toEqual("7,3");
   })
   it("Deberia retornar la posicion del autito dando mas de un salto (por defecto hacia el Este)", () => {
-    expect(moveCarJumping("10,3/SSS")).toEqual("16,3");
+    expect(moveCarJumping("1,3/SISS")).toEqual("3,7");
   })
 });

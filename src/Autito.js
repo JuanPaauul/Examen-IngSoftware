@@ -76,13 +76,20 @@ export function moveCarAlong(command){
   var listResult = [lastposition,listInitialPosition,movements];
   return listResult;
 }
-function jumpCar(jump, posicion){
-  return posicion+jump*2;
+function jumpCar(posicion,direction){
+  if(direction == "I")
+    posicion[1]=posicion[1]+2
+  else{
+    posicion[0]=posicion[0]+2
+  }
+  return posicion;
 }
 export function moveCarJumping(command){
   var movement = command.split("/")[1];
   var position = command.split("/")[0];
   var listAxis = [Number(position.split(",")[0]),Number(position.split(",")[1])];
-  listAxis[0]=jumpCar(stringLenght(movement), listAxis[0]);
+  for(var i = 0; i<stringLenght(movement); i++){
+    listAxis = jumpCar(listAxis,movement[i])
+  }
   return listAxis[0].toString()+","+listAxis[1].toString();
 }
