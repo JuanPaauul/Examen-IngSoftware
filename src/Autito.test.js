@@ -1,13 +1,14 @@
 import {getPosition} from "./Autito";
 import {moveCarAlong} from "./Autito";
+import {moveCarJumping} from "./Autito";
 
 describe("Autito ", () => {
-  it("Deberia retornar la posicion del autito", () => {
+  /*it("Deberia retornar la posicion del autito", () => {
     expect(getPosition("5,5")).toEqual("5,5");
   });
   it("Deberia retornar la posicion del autito", () => {
     expect(getPosition("1,3")).toEqual("1,3");
-  });
+  });*/
   /*it("Deberia retornar la posicion del autito dando un paso adelante (por defecto apunta la Este)", () => {
     expect(moveCar("1,3/A")).toEqual(2,3);
   });Debido al formato UTF-16 de .lenght hay un problema al calcula una sola letra ya que esta devuelve 2 en lugar de 1*/
@@ -32,7 +33,10 @@ describe("Autito ", () => {
   it("Deberia retornar la posicion del autito ahora incluyendo un limite", () => {
     expect(moveCarAlong("5,5/1,3S/ADAIADAI")).toEqual("0,1");
   });*/
-  it("Deberia retornar la posicion del autito ahora incluyendo un limite", () => {
+  /*it("Deberia retornar la posicion del autito ahora incluyendo un limite", () => {
     expect(moveCarAlong("5,5/1,3S/ADAIADAI")).toEqual("0,1");
-  });
+  });*/
+  it("Deberia retornar la posicion del autito dando un salto (por defecto hacia el Este)", () => {
+    expect(moveCarJumping("1,3/S")).toEqual("3,3");
+  })
 });

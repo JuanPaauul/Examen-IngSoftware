@@ -76,3 +76,6 @@ export function moveCarAlong(command){
   var listResult = [lastposition,listInitialPosition,movements];
   return listResult;
 }
+export function moveCarJumping(command){
+  return "3,3";
+}

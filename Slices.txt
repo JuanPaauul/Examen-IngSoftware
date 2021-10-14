@@ -1,0 +1,6 @@
+Dar un salto
+Dar mas de un salto
+Dar un salto integrando Izqeuirda
+Dar un salto integrando Derecehja
+Dar n saltos integrando direcciones
+Implementar limites al salto
